@@ -31,7 +31,7 @@ export default function App() {
 
   React.useEffect(() => {
     if (response?.type == "success") {
-      setAccessToken(response.authentication.accessToken);  //extract the Access token from response.authentication
+      setAccessToken(response.authentication.accessToken);
       accessToken && fetchUserInfo();
     }
   }, [response, accessToken])
